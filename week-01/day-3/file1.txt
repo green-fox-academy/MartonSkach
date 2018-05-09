@@ -1,1 +1,2 @@
 This is the first file with content
+I have removed this line, now adding it again
