@@ -1,0 +1,56 @@
+body {
+	margin: 0;
+	padding:0;
+	background-image: url(topography.png);
+	background-size: auto auto;
+	font-family: 'Roboto', consolas, courier
+	;
+}
+
+li {
+	padding-top: 10px;
+	display: inline;
+	float: right;
+	margin: 0 10px;
+	color: #ff0099;
+	font-size: 18px;
+
+}
+
+
+#logo {
+	float: left;
+	margin: 5px 0 0 0;
+
+}
+
+#header {
+	width: auto;
+	height: 42px;
+	background-color: #333333;
+	margin: 0;
+	padding: 0;
+	padding: 0 10%;
+}
+
+#personaltext {
+	padding: 45px 10%;
+
+}
+
+#linkedinbutton {
+	margin-right: 0;
+}
+
+a {
+	color: #ff0099;
+}
+
+h2 {
+	color: #ff0099;
+}
+
+#secondblock {
+	text-align: center;
+	padding: 0 10%;
+}

@@ -1,0 +1,87 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+li.paneltitle {
+	color: gray;
+	list-style-type: none;
+}
+
+#panel {
+	background-color: #F6F6F6;
+	width: 168px;
+	height: auto;
+	position: absolute; top: 0; left: 0;
+}
+
+#logo {
+	padding-top: 10px;
+}
+
+#header {
+	width: 85%;
+	height: 80px;
+	position: absolute; top: 0; left: 169px;
+}
+
+#content {
+	width: calc(100% - 209px);
+	height: auto;
+	position: absolute; top: 81px; left: 169px;
+	padding: 20px;
+}
+
+li.toplist {
+	list-style-type: none;
+	color: blue;
+	display: inline;
+	text-align: right;
+}
+
+li.toplist2 {
+	list-style-type: none;
+	color: blue;
+	display: inline;
+	text-align: left;
+}
+
+#headerleft {
+	float: left;
+}
+
+#headerright {
+	float: right;
+}
+
+#personalbar {
+	height: 80px;
+	width: calc(100% - 209px);
+	position: absolute; top: 0,33em; left: 169px;
+}
+
+li.panellist {
+	color: blue;
+	list-style-type: none;
+}
+
+#personalul {
+	float: right;
+	position: absolute; right: 10%;
+}
+
+
+th {
+	text-align: left;
+	font-weight: normal;
+	padding: 10px;
+	min-width: 200px;
+}
+
+#infobox {
+	background-color: #efebde;
+	width: 300px;
+	height: auto;
+	text-align: center;
+	padding-top: 20px;
+}

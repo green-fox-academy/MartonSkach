@@ -1,0 +1,43 @@
+/*Here is a comment*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+img {
+	width: 100%;
+}
+
+article {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+h1, 
+h2 {
+	text-align: center;
+}
+
+h1 {
+	color: #575759;
+	font-size: 40px;
+	top-margin: 20px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 28px;
+	margin: 10px 0;
+	color: #cba65e;
+}
+
+p {
+	font-size: 18px;
+	color: #59595a;
+	margin-bottom: 10px;
+}
