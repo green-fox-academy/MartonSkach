@@ -1,12 +1,24 @@
 # MartonSkach
-https://martonskach.github.io/
-<br>
+----------
+
+Hello!
+This is my repository for Green Fox Academy.
+
+----------
+
+For the first week's tasks, you can find my personal repositories through the following URLs:
+
+My personal introductory github.io page:
+https://martonskach.github.io/ 
+
+My hello-world repository:
 https://github.com/MartonSkach/hello-world
-<br>
+
+My patchwork task related repository:
 https://github.com/MartonSkach/patchwork
-<br>
+
+My git-lesson task related repository:
 https://github.com/MartonSkach/git-lesson-repository
-<br>
+
+My cloned repository from the GFA page:
 https://github.com/MartonSkach/MartonSkach
-<br>
-https://github.com/green-fox-academy/MartonSkach/blob/master/README.md
