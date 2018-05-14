@@ -17,3 +17,4 @@ for (let i: number = 0; i < numList.length; i++) {
 }
 // Switches the reversed back to the original
 console.log('Loop method: ' + reverseLooped);
+//https://media.giphy.com/media/C6JQPEUsZUyVq/giphy.gif
