@@ -10,9 +10,10 @@ console.log('Reversed: ' + reversed);
 
 let reverseLooped: number[] = [];
 
+
 for (let i: number = 0; i < numList.length; i++) {
-    let a: number = numList[i];
+    let a: number = numList[numList.length - 1 - i];
     reverseLooped.push(a);
 }
-
+// Switches the reversed back to the original
 console.log('Loop method: ' + reverseLooped);
