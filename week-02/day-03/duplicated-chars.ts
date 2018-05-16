@@ -6,9 +6,7 @@ const fs = require('fs');
 
 function removeDuplicate(filePath: string) {
     let tempString: string[] = fs.readFileSync(filePath, 'utf-8').split('');
-    /*for (let j: number = 0; j < tempString.length; j++) {
-        tempString[j].split('');
-    }*/
+
     let reducedString: string[] = [];
     let correctedText: string[] = [];
     for (let i: number = 0; i < tempString.length; i++) {
@@ -16,15 +14,24 @@ function removeDuplicate(filePath: string) {
             reducedString.push(tempString[i]);
         }
     }
-    /* for (let j: number = 0; j < reducedString.length; j++) {
-        console.log(reducedString[j].join());
-    } */
-    let finalText: any = reducedString.toString();
-    console.log(finalText.join(','));
+
+    for (let j: number = 0; j < reducedString.length; j++) {
+        let k: number = 0;
+        if (reducedString[j] === '\r') {
+            correctedText.push('\n');
+        }
+        correctedText.push(reducedString[j]);
+    }
+
+    return correctedText.join('');
+
+    
+
+
 }
 
 try {
-    removeDuplicate('duplicated-chars.txt');
+    console.log(removeDuplicate('duplicated-chars.txt'));
 } catch (error) {
-    console.log('LOFASZ')
-};
+    console.log('LOFASZ')   // <= I'm looking forward to the day when I can write such sophisticated code as Áron,
+};                          // who was kind enough to help me out with this little, but delicate error message.
