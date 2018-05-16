@@ -12,9 +12,13 @@ function declareWinner(filePath: string) {
             (winnerWinner[0] === 'OOO') ||
             (winnerWinner[1] === 'OOO') ||
             (winnerWinner[2] === 'OOO') ||
+            (winnerWinner[0][0] === winnerWinner[1][0] && winnerWinner[1][0] === winnerWinner[2][0] && winnerWinner[0][0] === 'O') ||
+            (winnerWinner[0][1] === winnerWinner[1][1] && winnerWinner[1][1] === winnerWinner[1][1] && winnerWinner[0][1] === 'O') ||
+            (winnerWinner[0][2] === winnerWinner[1][2] && winnerWinner[1][2] === winnerWinner[2][2] && winnerWinner[0][2] === 'O') ||
             (winnerWinner[0][0] === winnerWinner[0][1] && winnerWinner[0][1] === winnerWinner[0][2] && winnerWinner[0][0] === 'O') ||
             (winnerWinner[1][0] === winnerWinner[1][1] && winnerWinner[1][1] === winnerWinner[1][2] && winnerWinner[1][0] === 'O') ||
             (winnerWinner[2][0] === winnerWinner[2][1] && winnerWinner[2][1] === winnerWinner[2][2] && winnerWinner[2][0] === 'O') ||
+            (winnerWinner[0][0] === winnerWinner[1][1] && winnerWinner[1][1] === winnerWinner[2][2] && winnerWinner[0][0] === 'O') ||
             (winnerWinner[0][0] === winnerWinner[1][1] && winnerWinner[1][1] === winnerWinner[2][2] && winnerWinner[0][0] === 'O') ||
             (winnerWinner[2][0] === winnerWinner[1][1] && winnerWinner[1][1] === winnerWinner[0][2] && winnerWinner[2][0] === 'O'))
             {
@@ -23,6 +27,9 @@ function declareWinner(filePath: string) {
             (winnerWinner[0] === 'XXX') ||
             (winnerWinner[1] === 'XXX') ||
             (winnerWinner[2] === 'XXX') ||
+            (winnerWinner[0][0] === winnerWinner[1][0] && winnerWinner[1][0] === winnerWinner[2][0] && winnerWinner[0][0] === 'O') ||
+            (winnerWinner[0][1] === winnerWinner[1][1] && winnerWinner[1][1] === winnerWinner[1][1] && winnerWinner[0][1] === 'O') ||
+            (winnerWinner[0][2] === winnerWinner[1][2] && winnerWinner[1][2] === winnerWinner[2][2] && winnerWinner[0][2] === 'O') ||
             (winnerWinner[0][0] === winnerWinner[0][1] && winnerWinner[0][1] === winnerWinner[0][2] && winnerWinner[0][0] === 'X') ||
             (winnerWinner[1][0] === winnerWinner[1][1] && winnerWinner[1][1] === winnerWinner[1][2] && winnerWinner[1][0] === 'X') ||
             (winnerWinner[2][0] === winnerWinner[2][1] && winnerWinner[2][1] === winnerWinner[2][2] && winnerWinner[2][0] === 'X') ||
@@ -38,4 +45,4 @@ function declareWinner(filePath: string) {
     }
 }
 
-declareWinner('win-x.txt');
+declareWinner('win-o.txt');
