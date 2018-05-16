@@ -5,8 +5,7 @@ let far: string[] = ['kuty', 'macsk', 'kacs', 'rók', 'halacsk'];
 
 function appendA(far) {
     for (let i: number = 0; i < far.length; i++) {
-        far[i] = far[i] + "a";
-        
+        far[i] = far[i] + "a"; 
     }
     return far;
 }
