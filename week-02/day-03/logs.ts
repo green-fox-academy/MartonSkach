@@ -25,9 +25,10 @@ function ratioCounter(filePath: string) {
         for (let j: number = 0; j < tempArrayRatio.length; j++) {
             if (tempArrayRatio[j].substr(41, 4) === 'POST') {
                 containerPost.push(tempArrayRatio[j].substr(41, 4));
-            }
-            containerGet.push(tempArrayRatio[j].substr(41, 4));
-        }
+            } else if ((tempArrayRatio[j].substr(41, 4) === 'GET ')) {
+                containerGet.push(tempArrayRatio[j].substr(41, 4));
+            } 
+        } 
         console.log(containerGet.length / containerPost.length);
 
     } catch(error) {
