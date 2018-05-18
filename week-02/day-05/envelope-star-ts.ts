@@ -3,7 +3,7 @@
 const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d');
 
-function envelopeUpRight(numberOfLines: number) {
+function envelopeStar(numberOfLines: number) {
 
     let numberOfX: number = (canvas.width / 2) / numberOfLines; 
     let numberOfY: number = (canvas.height / 2) / numberOfLines;
@@ -21,15 +21,13 @@ function envelopeUpRight(numberOfLines: number) {
         y += numberOfY;
         
     }
-}
 
-function envelopeDownLeft(numberOfLines: number) {
 
-    let numberOfX: number = (canvas.width / 2) / numberOfLines; 
-    let numberOfY: number = (canvas.height / 2) / numberOfLines;
+    numberOfX = (canvas.width / 2) / numberOfLines; 
+    numberOfY = (canvas.height / 2) / numberOfLines;
 
-    let x: number = 0;
-    let y: number = canvas.height / 2;
+    x = 0;
+    y = canvas.height / 2;
 
     for (let i: number = 0; i < numberOfLines; i++) {
         x += numberOfX;
@@ -41,15 +39,14 @@ function envelopeDownLeft(numberOfLines: number) {
         ctx.stroke();
         
     }
-}
 
-function envelopeDownRight(numberOfLines: number) {
 
-    let numberOfX: number = (canvas.width / 2) / numberOfLines; 
-    let numberOfY: number = (canvas.height / 2) / numberOfLines;
 
-    let x: number = 0;
-    let y: number = (canvas.height / 2);
+    numberOfX = (canvas.width / 2) / numberOfLines; 
+    numberOfY = (canvas.height / 2) / numberOfLines;
+
+    x = 0;
+    y = (canvas.height / 2);
 
     for (let i: number = 0; i < numberOfLines; i++) {
         x += numberOfX;
@@ -60,15 +57,13 @@ function envelopeDownRight(numberOfLines: number) {
         ctx.lineTo(canvas.width - x, canvas.width / 2);
         ctx.stroke();
     }
-}
 
-function envelopeUpLeft(numberOfLines: number) {
 
-    let numberOfX: number = (canvas.width / 2) / numberOfLines; 
-    let numberOfY: number = (canvas.height / 2) / numberOfLines;
+    numberOfX = (canvas.width / 2) / numberOfLines; 
+    numberOfY = (canvas.height / 2) / numberOfLines;
 
-    let x: number = 0;
-    let y: number = 0;
+    x = 0;
+    y = 0;
 
     for (let i: number = 0; i < numberOfLines; i++) {
         
@@ -83,8 +78,6 @@ function envelopeUpLeft(numberOfLines: number) {
     }
 }
 
-envelopeDownLeft(40);
-envelopeDownRight(40);
-envelopeUpLeft(40);
-envelopeUpRight(40);
+envelopeStar(20);
+
 
