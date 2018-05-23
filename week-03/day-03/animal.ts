@@ -14,10 +14,11 @@ class Animal {
       this.name = name;
       this.hunger = 20;
       this.thirst = 20;
-    }
+    } else {
     this.name = name;
     this.hunger = 50;
     this.thirst = 50;
+    }
   }
 
   eat(foodQuantity: number) {
