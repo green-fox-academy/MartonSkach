@@ -37,4 +37,4 @@ function checkerBoard(x: number) {
     }
 }
 
-checkerBoard(20);
+checkerBoard(5);

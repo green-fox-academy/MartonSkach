@@ -13,7 +13,6 @@ function fibonacci(n: number): number {
     i++
     return fibonacci(n - 1);
   }
-
 }
 
 console.log(fibonacci(8));

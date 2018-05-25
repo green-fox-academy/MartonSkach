@@ -23,4 +23,4 @@ function triangle(triangleNumber) {
     }
 }
 
-triangle(30);
+triangle(10);

@@ -1,12 +1,15 @@
+
 'use strict';
 
 const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d');
 
-function linePlayGreen(numberOfLines: number) {
+function linePlayGreen(numberOfLines: number, numberOfTables: number) {
 
-    let numberOfX: number = 400 / numberOfLines; 
-    let numberOfY: number = 400 / numberOfLines;
+    let tableMultiplier: number = canvas.width / numberOfTables;
+
+    let numberOfX: number = canvas.width / numberOfLines; 
+    let numberOfY: number = canvas.height / numberOfLines;
 
     let x: number = 0;
     let y: number = 0;
@@ -15,17 +18,19 @@ function linePlayGreen(numberOfLines: number) {
         ctx.strokeStyle = "green";
         ctx.beginPath();
         ctx.moveTo(0, y);
-        ctx.lineTo(x, 400);
+        ctx.lineTo(x, canvas.height);
         ctx.stroke();
         x += numberOfX;
         y += numberOfY;
     }
 }
 
-function linePlayPurple(numberOfLines: number) {
+function linePlayPurple(numberOfLines: number, numberOfTables: number) {
 
-    let numberOfX: number = 400 / numberOfLines; 
-    let numberOfY: number = 400 / numberOfLines;
+    let tableMultiplier: number = canvas.width / numberOfTables;
+
+    let numberOfX: number = canvas.width / numberOfLines; 
+    let numberOfY: number = canvas.height / numberOfLines;
 
     let x: number = 0;
     let y: number = 0;
@@ -33,7 +38,7 @@ function linePlayPurple(numberOfLines: number) {
     for (let i: number = 0; i < numberOfLines; i++) {
         ctx.strokeStyle = "purple";
         ctx.beginPath();
-        ctx.moveTo(400, y);
+        ctx.moveTo(canvas.width, y);
         ctx.lineTo(x, 0);
         ctx.stroke();
         x += numberOfX;
@@ -41,5 +46,12 @@ function linePlayPurple(numberOfLines: number) {
     }
 }
 
-linePlayGreen(15);
-linePlayPurple(80);
+function multiplier (numberOfLines: number, numberOfTables: number) {
+    linePlayGreen(numberOfLines, numberOfTables);
+    linePlayPurple(numberOfLines, numberOfTables);
+}
+
+multiplier(50, 4);
+
+
+

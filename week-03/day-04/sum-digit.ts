@@ -13,4 +13,4 @@ function digitSum(n: number): number {
   }
 }
 
-console.log(`The sum of digits is: ${digitSum(12649)}`);
+console.log(`The sum of digits is: ${digitSum(1261)}`);
