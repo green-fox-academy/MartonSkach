@@ -17,3 +17,5 @@ For the first week's tasks, you can find my personal repositories through the fo
 [ My git-lesson task related repository](https://github.com/MartonSkach/git-lesson-repository)
 
 [ My cloned repository from the GFA page](https://github.com/MartonSkach/MartonSkach)
+
+[ My cloned repository for the To-Do application ](https://github.com/MartonSkach/todo-app)
