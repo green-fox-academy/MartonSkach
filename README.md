@@ -19,3 +19,5 @@ For the first week's tasks, you can find my personal repositories through the fo
 [ My cloned repository from the GFA page](https://github.com/MartonSkach/MartonSkach)
 
 [ My cloned repository for the To-Do application ](https://github.com/MartonSkach/todo-app)
+
+[ My Wanderer game repositiry ](https://github.com/MartonSkach/wanderer-typescript)
