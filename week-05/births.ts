@@ -17,6 +17,7 @@ function yearWithMostBirths(filePath: string): Object {
   for (let i: number = 0; i < fileContent.length; i++) {
     yearsFiltered.push(fileContent[i].substring(fileContent[i].indexOf(';') + 1, fileContent[i].indexOf(';') + 5));
   }
+
   for (let j: number = 0; j < yearsFiltered.length; j++) {
     let year = yearsFiltered[j];
     if (birthCount[year]) {
@@ -28,9 +29,8 @@ function yearWithMostBirths(filePath: string): Object {
 
   let highestNumber: number = birthCount[Object.keys(birthCount)[0]];
   let highestYear: string = Object.keys(birthCount)[0];
-
   for (let k: number = 1; k < yearsFiltered.length; k++) {
-    if (birthCount[Object.keys(birthCount)[k - 1]] < birthCount[Object.keys(birthCount)[k]]) {
+    if (highestNumber < birthCount[Object.keys(birthCount)[k]]) {
       highestNumber = birthCount[Object.keys(birthCount)[k]];
       highestYear = Object.keys(birthCount)[k];
     }
