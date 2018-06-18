@@ -1,0 +1,17 @@
+.container {
+  padding: 0;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background: #FFD62A;
+  list-style-type: none;
+}
+
+.item {
+  background: blueviolet;
+  height: 100px;
+  width: 100px;
+  margin-right: 5px;
+}

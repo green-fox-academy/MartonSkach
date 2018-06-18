@@ -15,7 +15,7 @@ function draw(startX, startY, branchLength, angle, branchWidth) {
   ctx.lineTo(0, -branchLength);
   ctx.stroke();
   
-  if(branchLength < 10) {
+  if(branchLength < 30) {
     ctx.restore();
     return;
   }

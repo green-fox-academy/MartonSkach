@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.item {
+  height: 150px;
+  min-width: 1px;
+}
+
+.green {
+  background: #51D400;
+  flex-grow: 1;
+}
+
+.yellow {
+  background: #FFD62A;
+  flex-grow: 2;
+}
+
+.purple {
+  background: blueviolet;
+  flex-grow: 1;
+}

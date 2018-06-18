@@ -158,3 +158,5 @@ awesome.addStudent(john);
 awesome.addMentor(mentor);
 awesome.addMentor(gandhi);
 awesome.info();
+
+console.log(people);
