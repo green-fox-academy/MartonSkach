@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Greetings</title>
+  </title>
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+
+<body>
+  <h1>Cocktails</h1>
+  <p>
+    <a href="/">all</a>
+    <% alcohols.forEach(element => { %>
+      <a href="/?alcohol=<%=element%>">
+        <%= element %>
+      </a>
+      <% }); %>
+  </p>
+
+  <table>
+    <tr>
+      <td id='headerName'>NAME</td>
+      <td id='headerPrice'>PRICE</td>
+    </tr>
+    <% list.forEach(element => { %>
+      <tr class="name">
+        <td class="drink">
+          <p class="drinkName">
+            <%= element.name %>
+              <% if (!element.isAlcoholic) { %>
+                <%= '(non-alcoholic)' %>
+                  <% } %>
+          </p>
+          <p>
+            <%= element.contains %>
+          </p>
+        </td>
+        <td class="price">
+          <%= element.price %>
+        </td>
+      </tr>
+      <% }); %>
+  </table>
+
+</body>
+
+</html>

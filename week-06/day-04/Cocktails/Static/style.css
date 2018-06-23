@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  font-family: Montserrat, sans-serif;
+}
+
+body {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+a {
+  color: green;
+  text-decoration: none; 
+}
+
+#headerName, #headerPrice {
+  background: black;
+  color: aliceblue;
+  text-align: center;
+  font-weight: bolder;
+  line-height: 1.5;
+}
+
+table, th, td {
+  border: 1px solid black;
+  line-height: 0.3;
+}
+
+table {
+  width: 600px;
+}
+
+.price {
+ text-align: center;
+}
+
+.drinkName {
+  font-weight: bold;
+}
