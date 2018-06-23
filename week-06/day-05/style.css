@@ -23,7 +23,7 @@ h1 {
   color: black;
   font-family: 'Indie Flower', cursive;
   padding-bottom: 20px;
-  font-size: 35px;
+  font-size: 50px;
 }
 
 .mainSpace {
@@ -94,16 +94,35 @@ h1 {
 }
 
 li {
-  width: 80px;
-  height: 80px;
+  height: 60px;
+  width: 106px;
   margin: 0 3px 0 3px;
   box-shadow: 2px 3px 8px #888888;
   display: flex;
   justify-content: center;
+  padding: 2px;
+  border: 2px;
+  transition: all 0.3s ease;
 }
 
 #pic1, #pic2, #pic3, #pic4, #pic5 {
-  height: 80px;
-  width: 80px;
-  overflow: hidden;
+  height: 60px;
+  width: 106px;
+  transition: all 0.3s ease;
+}
+
+.scrollLeft:hover, .scrollRight:hover {
+  cursor: pointer;
+}
+
+li:hover {
+  width: 160px;
+  height: 86px;
+  margin-top: -13px;
+  cursor: pointer;
+}
+
+li:hover #pic1, li:hover #pic2, li:hover #pic3, li:hover #pic4, li:hover #pic5 {
+  width: 160px;
+  height: 86px;
 }
