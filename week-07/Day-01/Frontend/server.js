@@ -102,24 +102,6 @@ app.post('/dountil/:what', (req, res) => {
   } else {
     res.json({
       error: 'Please, define a function!',
-      kiscica: req.params.what
     });
   }
 });
-
-
-/*
-
-app.post('/dountil/:what', (req, res) => {
-  const lofasz = req.body.until;
-  const kiscica = req.params.what;
-  const until = parseInt(req.body.until);
-  //-----SUM-----
-  res.json({
-    lofasz,
-    kiscica,
-    until
-  });
-});
-
-*/
