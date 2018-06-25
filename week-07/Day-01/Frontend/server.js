@@ -105,3 +105,33 @@ app.post('/dountil/:what', (req, res) => {
     });
   }
 });
+
+//-----ARRAY HANDLER------
+
+app.post('/array', (req, res) => {
+  let what = req.body.what;
+  let result = 0;
+  
+  if (what === 'sum') {
+    req.body.numbers.forEach(element => {
+      result += element;
+    });
+  } else if (what === 'multiply') {
+    result = 1;
+    req.body.numbers.forEach(element => {
+      result *= element;
+    });
+  } else if (what === 'double') {
+    result = []
+    req.body.numbers.forEach(element => {
+      result.push(element * 2);
+    });
+  } else {
+    res.json({
+      error: 'Please provide what to do with the numbers!'
+    });
+  }
+  res.json({
+    result
+  });
+});
