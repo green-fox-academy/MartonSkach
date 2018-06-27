@@ -20,4 +20,6 @@ For the first week's tasks, you can find my personal repositories through the fo
 
 [ My cloned repository for the To-Do application ](https://github.com/MartonSkach/todo-app)
 
-[ My Wanderer game repositiry ](https://github.com/MartonSkach/wanderer-typescript)
+[ My Wanderer game repository ](https://github.com/MartonSkach/wanderer-typescript)
+
+[ My Photo Gallery application ](https://github.com/MartonSkach/Gallery-app)
