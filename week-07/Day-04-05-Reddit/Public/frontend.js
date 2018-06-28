@@ -26,7 +26,6 @@ const renderPage = () => {
   });
 };
 
-
 http.onload = () => {
   renderPage();
 }
@@ -64,16 +63,3 @@ upVote.forEach(element => {
     element.preventDefault();
   });
 });
-
-
-
-
-
-/*
-const upVote = document.querySelectorAll('.voteUpButton');
-upVote.forEach(element => {
-  element.addEventListener('click', () => {
-    console.log('kiscica +');
-  });
-});
-*/
