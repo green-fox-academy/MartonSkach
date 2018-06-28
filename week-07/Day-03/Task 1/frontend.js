@@ -2,9 +2,10 @@
 const http = new XMLHttpRequest();
 http.open('GET', 'http://localhost:8080/api/task1', true);
 
-http.onload = () => {
+const renderPage = () => {
   const response = JSON.parse(http.responseText);
   const table = document.querySelector('table');
+  table.innerHTML = '';
 
   response.authors.forEach((element) => {
 
@@ -18,6 +19,7 @@ http.onload = () => {
     const book_price = document.createElement('td');
 
     book_name.innerHTML = element.book_name;
+    book_name.setAttribute('class', 'book_name');
     aut_name.innerHTML = element.aut_name;
     cate_descrip.innerHTML = element.cate_descrip;
     pub_name.innerHTML = element.pub_name;
@@ -31,4 +33,19 @@ http.onload = () => {
   });
 }
 
+http.onload = () => {
+  renderPage();
+}
+
 http.send();
+
+let tableElement = []
+tableElement.push(document.getElementsByClassName('book_name'));
+console.log(tableElement);
+console.log(tableElement[0]);
+
+tableElement.forEach(element => {
+  element.td.addEventListener('click', () => {
+    console.log('kiscica');
+  });
+});

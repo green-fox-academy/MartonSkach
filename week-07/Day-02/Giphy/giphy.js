@@ -14,7 +14,6 @@ http.onload = () => {
     image.addEventListener('click', () => {
       image.setAttribute('src', element.images.fixed_width.url)
     });
-
     container.appendChild(image);
   });
 }
