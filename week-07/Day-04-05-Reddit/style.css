@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 10px;
+  width: calc(100% - 20px);
+}
+
+table {
+  border: 1px solid black;
+}
+.scoreHolder {
+  border: 1px solid black;
+  display: flex;
+  width: 50px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainTextHolder {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  width: calc(100%);
+  min-height: 100px;
+  flex-direction: column;
+}
+
+.voteUpButton {
+  border: 1px solid black;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: seagreen;
+}
+
+.voteDownButton {
+  border: 1px solid black;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: tomato;
+}
+
+.title_text {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.url_text {
+  font-size: 12px;
+}

@@ -23,10 +23,6 @@ app.get('/', (req, res) => {
 
 app.get('/hello', (req, res) => {
   res.send('Hello')
-  /*
-  const unixTimestamp = unixTimestamp(Date.now);
-  res.send(unixTimestamp);
-  */
 })
 
 app.get('/posts', (req, res) => {
@@ -65,6 +61,51 @@ app.post('/posts', (req, res) => {
   });
 });
 
+app.put('/posts/upvote', (req, res) => {
+  let id = req.body.id;
+  let sql = `UPDATE posts SET post_score = post_score + 1 WHERE post_id = ${id};`;
+  conn.query(sql, (err, rows) => {
+    if (err) {
+      console.log(err);
+      res.status(500).send();
+      return;
+    }
+    sql = `SELECT * from posts WHERE post_id = ${id};`;
+    conn.query(sql, (err, rows) => {
+      if (err) {
+        console.log(err);
+        res.status(500).send();
+        return;
+      }
+      res.json({
+        rows,
+      });
+    });
+  });
+});
+
+app.put('/posts/downvote', (req, res) => {
+  let id = req.body.id;
+  let sql = `UPDATE posts SET post_score = post_score - 1 WHERE post_id = ${id};`;
+  conn.query(sql, (err, rows) => {
+    if (err) {
+      console.log(err);
+      res.status(500).send();
+      return;
+    }
+    sql = `SELECT * from posts WHERE post_id = ${id};`;
+    conn.query(sql, (err, rows) => {
+      if (err) {
+        console.log(err);
+        res.status(500).send();
+        return;
+      }
+      res.json({
+        rows,
+      });
+    });
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`Dr. Frankenserver: "IT'S ALIVE on port:${PORT}"`);
