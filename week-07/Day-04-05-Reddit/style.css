@@ -7,18 +7,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: cover;
-  background-position: center;
-  background-position-y: 0px; 
-  background-image: url('https://i.ytimg.com/vi/9CS7j5I6aOc/maxresdefault.jpg');
-  background-repeat: no-repeat;
   height: 400px;
   width: 100%;
-  color: azure;
+  background-image: url('./Img/background.gif');
+  background-size: cover;
+  text-shadow: 2px 2px #ff0000;
+  
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 60px;
+  color: rgb(233, 28, 148);
+  text-shadow: rgb(43, 243, 236) 3px 3px 2px;
+  font-weight: bold;
 }
 
 body {
@@ -29,6 +30,7 @@ body {
 table {
   border: 1px solid black;
 }
+
 .scoreHolder {
   border: 1px solid black;
   display: flex;
@@ -74,4 +76,9 @@ table {
 
 .url_text {
   font-size: 12px;
+}
+
+.addPostDiv {
+  height: 250px;
+  border: 1px solid black;
 }

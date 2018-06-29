@@ -13,8 +13,14 @@
   <div class="header">
     <h1>Definitely not a Reddit copy</h1>
   </div>
-  <table></table>
-  <button class="addNewPost">Post something!</button>
+  <table>
+
+  </table>
+  <div class="addPostDiv">
+    <button class="addNewPostButton" disabled>Post something!</button>
+    <input class="titleInput" type="text" onkeyup="ButtonCheck()" placeholder="Write your title here...">
+    <input class="urlInput" type="text" onkeyup="ButtonCheck()" placeholder="Write your URL here...">
+  </div>
   <script src="./Public/frontend.js"></script>
 </body>
 
