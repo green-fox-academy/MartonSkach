@@ -23,17 +23,17 @@ body.addEventListener('click', function (e) {
     }
   }
   if (e.target.innerText === 'Make candy rain') {
-    makeItRain += '0';
+    makeItRain *= 10;
   }
 })
 
 document.addEventListener('DOMContentLoaded', function () {
   setInterval(() => {
-    let candyGenerator = (lollypopCounter.innerText.length / 2) * 10 * parseInt(makeItRain);
+    let candyGenerator = (lollypopCounter.innerText.length / 2) * 10 * makeItRain;
     numberOfCandies += candyGenerator;
     totalCandiedGathered += candyGenerator;
     candyCounter.innerText = numberOfCandies;
     secondCounter++;
-    candySpeed.innerText = totalCandiedGathered / secondCounter;
+    candySpeed.innerText = Math.round( totalCandiedGathered / secondCounter * 10) / 10;
   }, 1000);
 });
