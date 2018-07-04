@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Movie selector</title>
+</head>
+
+<body>
+  <form>
+    <div class="container">
+      <h1>Movie selector</h1>
+      <div class="selectors">
+        <select class="my-select">
+          <option value="0" disabled selected>Select a genre</option>
+          <option value="1">Sci-fi</option>
+          <option value="2">Drama</option>
+          <option value="3">Comedy</option>
+          <option value="4">xXx</option>
+        </select>
+      </div>
+      <p>The selected movie is:</p>
+    </div>
+  </form>
+  <script>
+
+    const movieList = [
+      [`Moon`, `2001 Space odessy`, `Contact`],
+      [`Darkest hour`, `There will be blood`, `American beauty`],
+      [`Airplane!`, `Deadpool`, `Wayne's World`],
+      [`xXx`, `xXx: State of the Union`, `xXx: Return of Xander Cage`]];
+
+    const selectors = document.querySelector('.selectors');
+    const newSelector = document.createElement('select');
+    const pTag = document.querySelector('p');
+
+    const firstSelect = document.querySelector('.my-select');
+    firstSelect.addEventListener('change', function () {
+      newSelector.innerHTML = '';
+      selectors.appendChild(newSelector);
+      movieList[`${firstSelect.value - 1}`].forEach(element => {
+        let movie = document.createElement('option');
+        movie.innerText = element;
+        newSelector.appendChild(movie);
+      });
+    });
+    newSelector.addEventListener('change', function () {
+      pTag.innerText = `The selected movie is: ${newSelector.value}`;
+    });
+  </script>
+</body>
+
+</html>
