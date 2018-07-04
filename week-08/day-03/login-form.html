@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Register form</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+    * {
+      font-family: Montserrat, sans-serif;
+      padding: 0;
+      margin: 0;
+      width: 80%;
+    }
+
+    h1 {
+      font-size: 25px;
+    }
+
+    span {
+      font-size: 14px;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline-offset: 0px;
+      outline: none;
+      border: 1px solid green;
+      box-shadow: 0 0 2px lime;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      padding: 50px;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      margin-top: 15px;
+    }
+
+    input {
+      width: 250px;
+      height: 30px;
+    }
+
+    button {
+      background-color: black;
+      color: aliceblue;
+      width: 90px;
+      height: 30px;
+      border-radius: 15px;
+      border: none;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <div class="wrapper">
+      <h1>CREATE ACCOUNT</h1>
+      <label>
+        <span>
+          USERNAME
+        </span>
+        <input type="text" autofocus required>
+      </label>
+      <label>
+        <span>
+          E-MAIL ADDRESS
+        </span>
+        <input type="email" required>
+      </label>
+      <label>
+        <span>
+          PASSWORD
+        </span>
+        <input type="password" id="pw1" required>
+      </label>
+      <label>
+        <span>
+          PASSWORD AGAIN
+        </span>
+        <input type="password" id="pw2" required>
+      </label>
+      <button type="button">Register</button>
+    </div>
+  </form>
+  <script>
+    const pw1 = document.querySelector('#pw1');
+    const pw2 = document.querySelector('#pw2');
+    const button = document.querySelector('button');
+
+    button.addEventListener('click', function (e) {
+      if (pw1.value !== pw2.value) {
+        alert("Passwords doesn't match, please try again!")
+      } else {
+        button.type = 'submit';
+      };
+    });
+
+  </script>
+</body>
+
+</html>
