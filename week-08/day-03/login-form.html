@@ -29,8 +29,8 @@
     select:focus {
       outline-offset: 0px;
       outline: none;
-      border: 1px solid green;
-      box-shadow: 0 0 2px lime;
+      border: 1px solid #53c273;
+      box-shadow: 0 0 3px #53c273;
     }
 
     .wrapper {
@@ -101,7 +101,7 @@
 
     button.addEventListener('click', function (e) {
       if (pw1.value !== pw2.value) {
-        alert("Passwords doesn't match, please try again!")
+        alert("Passwords don't match, please try again!")
       } else {
         button.type = 'submit';
       };
