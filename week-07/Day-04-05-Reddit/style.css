@@ -1,18 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+a:link {
+  text-decoration: none;
+  color: #333333;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #333333;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 400px;
+  height: 170px;
   width: 100%;
   background-image: url('./Img/background.gif');
   background-size: cover;
   text-shadow: 2px 2px #ff0000;
-  
+}
+
+.mainContainer {
+  display: flex;
+  background-color: #EEEEEE;
+  padding: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: calc(100% - 20px);
+}
+
+.postContainer {
+  background-color: #FFFFFF;
+  margin-right: 10px;
+}
+
+.addPostDiv {
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 400px;
+  border: 1px solid #B4B4B4;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  border-collapse: collapse; 
+}
+
+.ruleTextContainer {
+  padding: 5px;
 }
 
 h1 {
@@ -22,55 +63,81 @@ h1 {
   font-weight: bold;
 }
 
-body {
-  padding: 10px;
-  width: calc(100% - 20px);
+h2 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 13px;
+}
+
+.postFunctions {
+  display: flex;
+}
+
+.deleteFunction, .modifyFunction {
+  margin-right: 8px;
+  font-style: italic;
+  padding: 3px 0 2px 0;
 }
 
 table {
-  border: 1px solid black;
+  border-spacing: 1px solid #B4B4B4;
+  border-collapse: collapse; 
+}
+
+.tableRow {
+  border: 1px solid #B4B4B4;
+}
+
+.tableRow:hover {
+  box-shadow: 0px 2px 2px 0.5px #888888;
 }
 
 .scoreHolder {
-  border: 1px solid black;
   display: flex;
   width: 50px;
-  height: 100px;
+  height: auto;
   align-items: center;
   justify-content: center;
 }
 
 .mainTextHolder {
-  border: 1px solid black;
   display: flex;
   justify-content: center;
-  width: calc(100%);
-  min-height: 100px;
   flex-direction: column;
 }
 
-.voteUpButton {
-  border: 1px solid black;
+.voteBar {
   display: flex;
-  width: 50px;
-  height: 50px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.voteUpButton {
+  display: flex;
+  width: 20px;
+  height: 20px;
   align-items: center;
   justify-content: center;
-  background-color: seagreen;
+  background-image: url(./Img/upvote.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .voteDownButton {
-  border: 1px solid black;
   display: flex;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   align-items: center;
   justify-content: center;
-  background-color: tomato;
+  background-image: url(./Img/downvote.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .title_text {
-  font-size: 25px;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -78,8 +145,10 @@ table {
   font-size: 12px;
 }
 
-.addPostDiv {
-  height: 250px;
-  border: 1px solid black;
+.addNewPostButton {
+  background-color: #3A9CDC;
+  width: 300px;
+  height: 29px;
+  color: white;
+  border: none;
 }
-

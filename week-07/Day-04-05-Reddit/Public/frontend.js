@@ -1,7 +1,7 @@
 'use stict'
 const http = new XMLHttpRequest();
 const host = 'http://localhost:3000'
-http.open('GET', `${host}/posts`, false);
+http.open('GET', `${host}/posts`, true);
 
 const renderPage = () => {
   const response = JSON.parse(http.responseText);
@@ -10,19 +10,31 @@ const renderPage = () => {
   response.rows.forEach((element) => {
 
     const tr = document.createElement('tr');
+    tr.classList.add('tableRow');
     table.appendChild(tr);
 
     const scoreHolder = document.createElement('td')
     const mainTextHolder = document.createElement('td')
-    const voteButton = document.createElement('td')
 
-    scoreHolder.innerHTML = `<div class="scoreHolder"><p id="score${element.post_id}">${element.post_score}</p></div>`
-    mainTextHolder.innerHTML = `<div class="mainTextHolder"><p class="title_text">${element.post_title}</p><a href="${element.post_url}" class="url_text">${element.post_url}</a><p class="owner_name">Posted by: ${element.post_owner}</p></div>`
-    voteButton.innerHTML = `<div class="voteUpButton" id="${element.post_id}"><p>UP</p></div><div class="voteDownButton" id="${element.post_id}"><p>DOWN</p></div>`
 
+    scoreHolder.innerHTML = `<div class='voteBar'>
+    <div class="voteUpButton" id="${element.post_id}"></div>
+    <div class="scoreHolder"><p id="score${element.post_id}">${element.post_score}</p></div>
+    <div class="voteDownButton" id="${element.post_id}"></div>
+    </div>`;
+    
+    mainTextHolder.innerHTML = `<div class="mainTextHolder">
+    <a href="${element.post_url}" class="url_text"><p class="title_text">${element.post_title}</p></a>
+    <p class="owner_name">Submitted by: ${element.post_owner}</p>
+    <div class='postFunctions'>
+    <p class='deleteFunction'>delete</p>
+    <p class='modifyFunction'>modify</p>
+    </div>
+    </div>`;
+    
     tr.appendChild(scoreHolder);
     tr.appendChild(mainTextHolder);
-    tr.appendChild(voteButton);
+    
   });
 };
 
@@ -38,8 +50,9 @@ downVote.forEach(element => {
     const xhr = new XMLHttpRequest();
     xhr.open("PUT", `${host}/posts/${element.id}/downvote`, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send();
     document.querySelector(`#score${element.id}`).innerText -= 1;
-    element.preventDefault();
+    event.preventDefault();
   });
 });
 
@@ -49,10 +62,11 @@ upVote.forEach(element => {
     const xhr = new XMLHttpRequest();
     xhr.open("PUT", `${host}/posts/${element.id}/upvote`, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send();
     let upVotedScore = document.querySelector(`#score${element.id}`).innerText;
     upVotedScore = parseInt(upVotedScore) + 1;
     document.querySelector(`#score${element.id}`).innerText = upVotedScore;
-    element.preventDefault();
+    event.preventDefault();
   });
 });
 
@@ -73,8 +87,9 @@ if (!postOwnerInput.value) {
   postOwnerInput.value = "";
 }
 
-addNewPostButton.addEventListener('click', () => {
 
+
+addNewPostButton.addEventListener('click', () => {
   const xhr = new XMLHttpRequest();
   xhr.open("POST", `${host}/posts`, true);
   xhr.setRequestHeader('Content-Type', 'application/json');
@@ -87,7 +102,6 @@ addNewPostButton.addEventListener('click', () => {
     post_url: urlInput.value,
     post_owner: postOwnerInput.value
   }));
-
   const xhrget = new XMLHttpRequest();
   xhrget.open("GET", `${host}/posts`, true);
   xhrget.setRequestHeader('Content-Type', 'application/json');

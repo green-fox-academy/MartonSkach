@@ -94,8 +94,8 @@ app.put('/posts/:id/downvote', (req, res) => {
   conn.query(sql, (err, rows) => {
     if (err) {
       console.log(err);
-      res.status(500).send();
-      return;
+      res.status(500).send()
+      return;;
     }
     sql = `SELECT * from posts WHERE post_id = ${id};`;
     conn.query(sql, (err, rows) => {
