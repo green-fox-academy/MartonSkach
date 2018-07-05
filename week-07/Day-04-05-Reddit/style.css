@@ -23,6 +23,8 @@ a:visited {
   height: 170px;
   width: 100%;
   background-image: url('./Img/background.gif');
+  background-position-x: center;
+  background-position-y: -70px;
   background-size: cover;
   text-shadow: 2px 2px #ff0000;
 }
@@ -68,7 +70,11 @@ h2 {
 }
 
 p {
-  font-size: 13px;
+  font-size: 12px;
+}
+
+span {
+  font-size: 12px;
 }
 
 .postFunctions {
@@ -79,6 +85,10 @@ p {
   margin-right: 8px;
   font-style: italic;
   padding: 3px 0 2px 0;
+}
+
+.deleteFunction:hover, .modifyFunction:hover {
+  cursor: pointer;
 }
 
 table {
