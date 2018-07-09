@@ -1,6 +1,5 @@
 let multiplier = (number) => {
-  let baseValue = number;
-  return (number) => {
+  return (baseValue) => {
     return baseValue * number;
   }
 }
