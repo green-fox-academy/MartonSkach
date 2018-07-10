@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Board game</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .gridContainer {
+      height: 450px;
+      width: 100%;
+      display: grid;
+      grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      background-color: black;
+      grid-gap: 2px;
+      padding: 2px;
+    }
+
+    #purple {
+      background-color: purple;
+      box-shadow: none;
+      grid-area: 2 / 3 / 3 / 4;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+    }
+
+    #green {
+      grid-area: 2 / 2 / 6 / 7;
+      background-color: lime;
+      box-shadow: none;
+      order: 1;
+      display: grid;
+      grid-template: 1.5fr 3fr 1.5fr / 1fr 3fr 4fr 1fr
+    }
+
+    .gridContainer div {
+      background-color: #FFD62A;
+      box-shadow: 2px 2px 5px black;
+      order: 2;
+    }
+
+    #pubDiv {
+      grid-area: 6 / 7 / 7 / 8;
+      order: 3;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+    }
+
+    #startDiv {
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="gridContainer">
+    <div id="startDiv">START</div>
+    <div class="green" id="green">
+      <div id="purple">CARDS</div>
+    </div>
+    <div id="pubDiv">Pub</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+
+</html>
