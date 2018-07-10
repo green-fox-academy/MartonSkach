@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Advanced layout</title>
+  <style>
+  
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  .header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: blueviolet;
+  }
+
+  .blueButton {
+    width: 8%;
+    height: 30px;
+    margin-right: 2%;
+    background-color: aqua;
+  }
+
+  #firstButton {
+    margin-left: calc(8% + 10px);
+  }
+
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template: 4.5fr 4.5fr 1fr  / 8% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 8%;
+    grid-gap: 10px;
+    height: 600px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .bigGreen {
+    background-color: limegreen;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    color: aliceblue;
+  }
+
+  .smallGreen {
+    background-color: limegreen;
+    display: grid;
+    grid-template: 1fr 8fr 1fr / 1fr 8fr 1fr;
+  }
+
+  .red {
+    background-color: tomato;
+    grid-area: 2 / 2 / 3 / 3;
+  }
+
+  .footer {
+    background-color: gray;
+    grid-area: 3 / 2 / 4 / 10;
+  }
+
+  #g1 {
+    grid-area: 1 / 2 / 2 / 6;
+  }
+
+  #g2 {
+    grid-area: 1 / 6 / 2 / 10;
+  }
+
+  #g3 {
+    grid-area: 2 / 2 / 3 / 6;
+  }
+
+  #g4 {
+    grid-area: 2 / 6 / 3 / 8;
+  }
+
+  #g5 {
+    grid-area: 2 / 8 / 3 / 10;
+  }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="blueButton" id="firstButton"></div>
+    <div class="blueButton"></div>
+    <div class="blueButton"></div>
+    <div class="blueButton"></div>
+  </div>
+  <div class="container">
+    <div class="bigGreen" id="g1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatum perferendis ipsa modi quod culpa provident praesentium enim aperiam, repudiandae nemo saepe expedita commodi iure reprehenderit possimus neque quo quasi? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit tenetur animi molestias omnis sed consequatur ipsa deserunt aperiam voluptas temporibus accusamus saepe optio quidem earum autem, culpa minus rerum eligendi.</div>
+    <div class="bigGreen" id="g2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, quas officiis expedita dolor nulla debitis corporis sit, earum laudantium omnis numquam aut nihil reprehenderit at illum voluptatem repellendus beatae necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit et obcaecati suscipit nesciunt reiciendis. Nulla earum nesciunt rem qui iure quidem ipsam quia. Modi vel, dolorum magni earum hic iure.</div>
+    <div class="bigGreen" id="g3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente nesciunt quo odio ut, error corporis quae deserunt. Vel temporibus nemo fugit repellendus vitae suscipit eveniet ut architecto earum id. Reprehenderit!</div>
+    <div class="smallGreen" id="g4">
+      <div class="red" id="r1"></div>
+    </div>
+    <div class="smallGreen" id="g5">
+        <div class="red" id="r2"></div>
+    </div>
+    <div class="footer"></div>
+  </div>
+</body>
+</html>
