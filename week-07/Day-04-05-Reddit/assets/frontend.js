@@ -1,4 +1,4 @@
-'use stict'
+'use stict';
 const http = new XMLHttpRequest();
 const host = 'http://localhost:3000'
 http.open('GET', `${host}/posts`, true);
@@ -8,7 +8,6 @@ const renderPage = () => {
   const table = document.querySelector('table');
   console.log(response);
   response.rows.forEach((element) => {
-
     const tr = document.createElement('tr');
     tr.classList.add('tableRow');
     table.appendChild(tr);
@@ -28,8 +27,8 @@ const renderPage = () => {
     <a href="${element.post_url}" class="url_text"><p class="title_text">${element.post_title}</p></a>
     <p class="owner_name">Submitted by: ${element.post_owner}</p>
     <div class='postFunctions'>
-    <p class='deleteFunction' id='${element.post_id}'>delete</p>
-    <p class='modifyFunction'id='${element.post_id}'>modify</p>
+    <a class='deleteFunction' id='${element.post_id}'>delete</a>
+    <a href='./modify/${element.post_id}' class='modifyFunction'id='${element.post_id}'>modify</a>
     </div>
     </div>`;
 

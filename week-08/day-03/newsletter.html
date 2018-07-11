@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Newsletter</title>
+</head>
+
+<body>
+  <form>
+    <label>
+      <span>
+        USERNAME
+      </span>
+      <input class="username" type="text" autofocus required>
+    </label>
+    <label>
+      <span>
+        E-MAIL ADDRESS
+      </span>
+      <input class="email" type="email" required>
+    </label>
+    <button type="button">Mehet</button>
+  </form>
+  <script>
+    'use stict'
+    const http = new XMLHttpRequest();
+    const host = 'http://localhost:3000'
+    http.open('GET', `${host}/signup`, true);
+
+    const username = document.querySelector('.username');
+    const email = document.querySelector('.email').value;
+    const submit = document.querySelector('button');
+
+submit.addEventListener('click', () => {
+    console.log(username);
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", `${host}/signup`, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify({
+      user_name: username,
+      user_email: email
+    }));
+    const xhrget = new XMLHttpRequest();
+    xhrget.open("GET", `${host}/signup`, true);
+    xhrget.setRequestHeader('Content-Type', 'application/json');
+  });
+
+  </script>
+</body>
+
+</html>

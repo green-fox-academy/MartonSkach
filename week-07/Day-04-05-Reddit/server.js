@@ -6,7 +6,7 @@ const mysql = require('mysql');
 const app = express();
 const PORT = 3000
 
-app.use(express.static(__dirname));
+app.use('/assets', express.static('assets'));
 
 app.use(express.json());
 
@@ -131,6 +131,26 @@ app.delete('/posts/:id', (req, res) => {
       res.json({
         deletedRow,
       });
+    });
+  });
+});
+
+app.get('/modify/:id', (req, res) => {
+  res.sendFile(__dirname + '/modifyform.html')
+})
+
+app.post('/modify/:id', (req, res) => {
+  let id = req.params.id;
+  let textContent = req.body.textContent;
+  let sql = `UPDATE posts SET post_title = "${textContent}" WHERE post_id = ${id};`;
+  conn.query(sql, (err, rows) => {
+    if (err) {
+      console.log(err);
+      res.status(500).send();
+      return;
+    }
+    res.json({
+      rows,
     });
   });
 });

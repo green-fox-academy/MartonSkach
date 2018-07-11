@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Disable button</title>
+  <style>
+    .favPet,
+    .signUp,
+    .buttons {
+      display: flex;
+      flex-direction: column;
+    }
+
+    button {
+      margin: 5px;
+      padding: 3px;
+      width: 80px;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+
+    <div class="container">
+      <div class="favPet">
+        <span>What is your favourite pet?</span>
+        <label>
+          <input type="radio" value="Dog" name="chbox-favpet">
+          <span>Dog</span>
+        </label>
+        <label>
+          <input type="radio" value="Cat" name="chbox-favpet">
+          <span>Cat</span>
+        </label>
+        <label>
+          <input type="radio" value="Viktor the goldfish" name="chbox-favpet">
+          <span>Viktor the goldfish</span>
+        </label>
+      </div>
+      <div class="signUp">
+        <span>Do you want to sign up for cat facts?</span>
+        <label>
+          <input type="radio" value="Yes" name="chbox-signup">
+          <span>Yes</span>
+        </label>
+        <label>
+          <input type="radio" value="No" name="chbox-signup">
+          <span>No</span>
+        </label>
+      </div>
+      <div class="buttons">
+        <button id="but1" disabled>I love cats</button>
+        <button id="but2" disabled>Sign up</button>
+      </div>
+    </div>
+  </form>
+  <script>
+    let favPet = document.querySelectorAll('input[name="chbox-favpet"]:checked');
+    let signup = document.querySelectorAll('input[name="chbox-signup"]:checked');
+
+    document.addEventListener('click', function () {
+      favPet = document.querySelectorAll('input[name="chbox-favpet"]:checked');
+      signup = document.querySelectorAll('input[name="chbox-signup"]:checked');
+      if (signup[0].value === 'Yes') {
+        document.querySelector('#but1').disabled = false;
+      } else {
+        document.querySelector('#but1').disabled = true;
+      }
+      if (favPet[0].value !== '' && signup[0].value !== '') {
+        document.querySelector('#but2').disabled = false;
+      }
+    });
+
+    document.querySelector('#but1').addEventListener('click', function () {
+      alert(`Thank you, you've successfully signed up for cat facts`);
+    });
+
+    document.querySelector('#but2').addEventListener('click', function () {
+      if (favPet[0].value === 'Viktor the goldfish' && signup[0].value === 'No') {
+        alert('Sigh, we still added you to the cat facts list');
+      }
+    });
+  </script>
+</body>
+
+</html>
