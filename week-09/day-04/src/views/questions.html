@@ -17,9 +17,38 @@
     <h1>Create new question</h1>
     <form>
       <div class="addNewQuestions">
-          <button type="radio">Submit</button>
+        <div class="textHolder">
+          <input type="text" placeholder="Type your questions here" id="questionInput" required>
+          <p id="answerText">Answers</p>
+          <div class="answerInputField">
+            <label class="inputLabel">
+              <p>#1</p>
+              <input type="text" placeholder="Type your answer here" id="answer1Input" required>
+              <input type="radio" class="radioInputForAnswers" name="radioInputForAnswers" id="answer1RadioButton" required>
+            </label>
+            <label class="inputLabel">
+              <p>#2</p>
+              <input type="text" placeholder="Type your answer here" id="answer2Input" required>
+              <input type="radio" class="radioInputForAnswers" name="radioInputForAnswers" id="answer2RadioButton" required>
+            </label>
+            <label class="inputLabel">
+              <p>#3</p>
+              <input type="text" placeholder="Type your answer here" id="answer3Input" required>
+              <input type="radio" class="radioInputForAnswers" name="radioInputForAnswers" id="answer3RadioButton" required>
+            </label>
+            <label class="inputLabel">
+              <p>#4</p>
+              <input type="text" placeholder="Type your answer here" id="answer4Input" required> 
+              <input type="radio" class="radioInputForAnswers" name="radioInputForAnswers" id="answer4RadioButton" required>
+            </label>
+          </div>
+        </div>
+        <button type="submit" id="submitNew">Submit</button>
       </div>
     </form>
+    <a href="http://localhost:3000/">
+      <p>Go back to the game</p>
+    </a>
   </div>
   <script src="/static/questions.js"></script>
 </body>

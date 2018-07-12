@@ -45,18 +45,13 @@
   border-radius: 15px;
 }
 
-.addNewQuestions {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: aliceblue;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  width: 600px;
-  padding: 40px;
-  border-radius: 15px;
+#submitNew {
+  min-width: 20%;
+  width: auto;
+}
+
+#submitNew:focus {
+  background-color: #6190E8;
 }
 
 button {
@@ -68,9 +63,6 @@ button {
   background-color: #A7BFE8;
 }
 
-#submitNew {
-  width: 90px;
-}
 
 button:hover {
   background-color: #6190E8;
@@ -86,4 +78,58 @@ button:focus {
 
 span {
   padding-bottom: 20px;
+}
+
+.textHolder {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.inputLabel {
+  width: calc(100%);
+  display: flex;
+  padding: 5px;
+  margin: 10px;
+  border-bottom: 1px solid gray;
+  align-items: center;
+}
+
+.inputLabel p {
+  padding-right: 5px;
+}
+
+.inputLabel input {
+  width: 100%;
+}
+
+.answerInputField {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:  center;
+  align-items: center;
+}
+
+.addNewQuestions {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 600px;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+#answerText {
+  padding-top: 20px;
+}
+
+.radioInputForAnswers {
+  height: auto;
+  max-width: 20px;
 }
