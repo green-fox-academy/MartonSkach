@@ -4,7 +4,7 @@ const BeerTable = props => (
   <div>
     <p>Name: {props.name}</p>
     <p>Desc: {props.description}</p>
-    <img src={props.image_url} />
+    <img src={props.image_url} alt="ingyensoer" />
   </div>
 )
 
