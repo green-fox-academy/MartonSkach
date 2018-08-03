@@ -1,13 +1,11 @@
 import React from 'react';
 
-class BeerTable extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>The beer table</h1>
-      </div>
-    );
-  }
-};
+const BeerTable = props => (
+  <div>
+    <p>Name: {props.name}</p>
+    <p>Desc: {props.description}</p>
+    <img src={props.image_url} />
+  </div>
+)
 
 export default BeerTable;

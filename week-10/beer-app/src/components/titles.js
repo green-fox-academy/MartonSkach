@@ -1,13 +1,9 @@
 import React from 'react';
 
-class Title extends React.Component {
-  render() {
-    return (
+const Title = () => (
       <div>
-        <h1>Beer Catalogue</h1>
+        <h1>The Beer Catalogue</h1>
       </div>
-    );
-  }
-};
+)
 
 export default Title;
